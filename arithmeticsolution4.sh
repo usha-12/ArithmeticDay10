@@ -12,3 +12,12 @@ for key in "${!result[@]}"; do
     echo "Computation $((key+1))   ${result[$key]}"
 done
 echo ""
+#Read the values from the Dictionary into the array
+declare -a arrayResult
+for key in "${!result[@]}"; do
+	arrayResult[$key]=${result[$key]}
+done
+echo ""
+
+echo "Array ${arrayResult[@]} "
+echo ""
