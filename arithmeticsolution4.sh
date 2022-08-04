@@ -53,3 +53,12 @@ for (( k=$l; k > 0; k-- )); do
 done
 echo ""
 echo ""
+
+
+
+
+
+
+#Sort the results to show the Computation Value in Ascending Order
+echo "Results in Ascending order : ${arrayResult[@]} "
+echo ""
