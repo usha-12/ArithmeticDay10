@@ -1,4 +1,5 @@
-echo ""
-echo "Welcome to the Arithmetic Computation and Sorting Program"
-echo "This program computes different arithmetic expressions and sorts the results."
+#Compute a + b * c
+operation1=$((n1+$((n2*$n3))))
+
+echo "Computation 1 :     a + b * c = $operation1"
 echo ""
