@@ -1,4 +1,6 @@
-operation3=$((n3+$((n1/$n2))))
+#Compute a % b + c
+operation4=$(($((n1%$n2))+$n3))
 
-echo "Computation 3 :     c + a / b = $operation3"
+
+echo "Computation 4 :     a % b + c = $operation4"
 echo ""
