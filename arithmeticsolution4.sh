@@ -21,3 +21,35 @@ echo ""
 
 echo "Array ${arrayResult[@]} "
 echo ""
+
+
+
+#Sort the results to show the Computation Result in the Descending Order
+flag=1;
+l=${#arrayResult[@]}
+for (( i = 0; i < $l; i++ ))
+do
+    flag=0;
+    for ((j = 0; j < $l-$i; j++ ))
+    do
+        if [[ ${arrayResult[$j]} -gt ${arrayResult[$j+1]} ]]
+        then
+            temp=${arrayResult[$j]};
+            arrayResult[$j]=${arrayResult[$j+1]};
+            arrayResult[$j+1]=$temp;
+            flag=1;
+        fi
+    done
+
+    if [[ $flag -eq 0 ]]; then
+          break;
+    fi
+done
+
+echo ""
+echo "Results in descending order  : "
+for (( k=$l; k > 0; k-- )); do
+	echo " ${arrayResult[$k]}"
+done
+echo ""
+echo ""
